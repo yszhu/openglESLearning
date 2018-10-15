@@ -1,0 +1,35 @@
+the example named HelloTrangle show a easy way
+to use opengl es on android 
+
+what you need to do is to implement the GLSurfaceView.Renderer
+
+step 1	create V(f) shader
+
+step 2	compile V(f) shader
+
+step 3	create progrom object
+
+step 4	attach v(f) shader
+
+step 5	mark location of varible in shader progrom (for data post)
+
+step 6	link progrom (progrom objct , v(f) shader) 
+
+step 7 set opengl es clear color 
+
+on drawwing each frame 
+	step 8.1 set viewport
+
+	step 8.2 clear buffer
+
+	step 8.3 use progrom object
+
+	step 8.4 post data
+
+	step 8.5 enable data buffer
+
+	step drawarray
+
+in mainActivity
+setContentView() with a GLSurfaceView object and set renderer with an 
+instance if the GLSurfaceView.Renderer you just implement
