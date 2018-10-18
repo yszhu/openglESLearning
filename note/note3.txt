@@ -1,0 +1,15 @@
+A better way to store vertex data used in 
+vertex shader is using buffer object ,
+in this way ,data of vertex attribute will
+stored in GPU instant of memery ,so there is
+no need to transport them every time when draw frame
+
+in the demo VertexBufferObject ,it seems that 
+shader will check buffer object first when get data of
+vertex attribute and the default source is vertex buffer object.
+cause both array way and vertex buffer object way
+ transport data to vertex shader use the function
+glVertexAttribPointer ,the difference between them is the last 
+param, array way is the data buffer(from data array),
+and vertex buffer object way is offset of the first vertex data.
+for more detail,checking java code.

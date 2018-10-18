@@ -6,3 +6,5 @@ note list the main frame of what I understand and the detail
 	use ide Android studio open example to check the detail mostly in java code
 
 1. note 1 ->HelloTrangle
+2. note 2 ->Example6_6
+3. note 3 ->VertexBufferObject
