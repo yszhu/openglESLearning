@@ -1,0 +1,45 @@
+there are different ways to load vertex attribute data
+form program to vertex shader
+1. serise of glVertexAttrib1f 2f 3f 4f transport n floats,
+	and glVertexAttrib1v 2v 3v 4v transport n dimensions vector.
+   they are usually used to transport common attribute of vertices,
+   like a single color triangle,three vertices all be red(or other color)
+
+
+-------------
+a vertex attribute can be post data by basic type or array (define in 
+basic type only),defult by basic type,when using array(no mater in buffer 
+or not),must enablearray using function glEnableVertexAttribArray(after
+ drawing,disable it by glDisableVertexAttribArry)
+
+2.vertex array,post all vertices attribute(like position) by array,
+	use glVertexAttributePointer or glVertexAttributeIPointer(for indexes)
+	the first param of both functions is the index of vertex attribute in
+	vertex shader ,three ways to get it
+		1)use layout(loaction=n) (best way)
+		2)glBindAttribLocation(programObject,index,arrtibuteName) 
+		bind it youself using attribute name.
+		Effect next link shader and program.so it is no matter bind the 
+		attribute before link or the attribute no active(if so,
+		will be ingore)
+		3)glGetAttrubLocation(programObject,attributeName) allocated 
+		by opengl es,query it .
+
+3.vetex buffer object (VBO).version comes 3.0,it's the best way,cause 
+vertex
+ attribute data can be stored in GPU,it's no need load it from program 
+ to GPU every time drawing frame
+
+4.vertex array object (VBO).make snapshot of status of vertex array 
+binding with buffer.so that program can switch to a specific status 
+quickly
+
+5.map buffer object .another way to transport data to GPU ,designed to 
+decrese consumerise of memery.
+
+6.copy buffer object ,copy data form buffer object to buffer object.
+
+
+summary the mostly used is 3 VBO.
+more detail,checking java code.
+

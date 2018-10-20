@@ -1,0 +1,5 @@
+Map buffer object
+it's a way to decrease the consumerism of memery
+maybe GPU could read vertex attribute data form 
+memery by map buffer.
+more detail ,checking java code

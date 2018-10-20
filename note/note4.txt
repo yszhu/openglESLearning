@@ -1,0 +1,7 @@
+VAO vertex array object
+VAO can make a snapshot of status
+of VBOs bindings. made a VAO,you can
+quickly switch to the status just call
+funtion glBindVertexArray instead of bindBuffer,
+enableVertexAttribArray ect.
+more deatail ,checking java code
