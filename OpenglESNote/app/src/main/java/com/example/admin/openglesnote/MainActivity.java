@@ -7,31 +7,18 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.example.admin.openglesnote.mainLenstener.MainListener;
-import com.example.admin.openglesnote.notes.HelloTriangle;
-import com.example.admin.openglesnote.notes.MapBufferObject;
-import com.example.admin.openglesnote.notes.TriangleWithLoader;
-import com.example.admin.openglesnote.notes.VertexArrayObject;
-import com.example.admin.openglesnote.notes.VertexBufferObject;
+import com.example.admin.openglesnote.listeners.MainListener;
 
 public class MainActivity extends AppCompatActivity {
 
     private ListView nameList;
     private Button checkDrawing;
     private String[] names={
-            "Hello Triangle",
-            "Triangle with loader ",
-            "vertex buffer object",
-            "vertex array object",
-            "map buffer object"
+            "vertex attribute data transport"
     };
 
     private Class[] activities={
-            HelloTriangle.class,
-            TriangleWithLoader.class,
-            VertexBufferObject.class,
-            VertexArrayObject.class,
-            MapBufferObject.class,
+            NoteListActivity.class
     };
     private MainListener mainListener;
 
@@ -64,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void checkDrawing(){
-        Intent intent=new Intent(MainActivity.this,DrawingActivity.class);
+        Intent intent=new Intent(MainActivity.this,CheckingActivity.class);
         startActivity(intent);
     }
 }

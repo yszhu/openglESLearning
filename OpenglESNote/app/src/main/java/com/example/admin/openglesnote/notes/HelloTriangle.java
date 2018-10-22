@@ -1,12 +1,11 @@
 package com.example.admin.openglesnote.notes;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioGroup;
 
 import com.example.admin.openglesnote.NoteActivity;
-import com.example.admin.openglesnote.NoteListener.NoteListener;
+import com.example.admin.openglesnote.listeners.NoteListener;
 import com.example.admin.openglesnote.R;
 
 public class HelloTriangle extends NoteActivity {

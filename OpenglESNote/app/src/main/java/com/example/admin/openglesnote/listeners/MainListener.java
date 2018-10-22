@@ -1,4 +1,4 @@
-package com.example.admin.openglesnote.mainLenstener;
+package com.example.admin.openglesnote.listeners;
 
 import android.view.View;
 import android.widget.AdapterView;

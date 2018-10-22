@@ -8,6 +8,7 @@ import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.admin.openglesnote.data.Renderers;
 import com.example.admin.openglesnote.renderers.HelloTriangleRenderer;
 
 public class DrawingActivity extends Activity {
@@ -24,7 +25,7 @@ public class DrawingActivity extends Activity {
             // Tell the surface view we want to create an OpenGL ES 3.0-compatible
             // context, and set an OpenGL ES 3.0-compatible renderer.
             mGLSurfaceView.setEGLContextClientVersion ( CONTEXT_CLIENT_VERSION );
-            mGLSurfaceView.setRenderer ( new HelloTriangleRenderer( this ) );
+            mGLSurfaceView.setRenderer ( Renderers.getCurrentRenderer(this) );
         }
         else
         {

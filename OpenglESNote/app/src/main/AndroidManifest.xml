@@ -22,6 +22,9 @@
         <activity android:name=".notes.VertexArrayObject"/>
         <activity android:name=".notes.MapBufferObject"/>
 
+        <activity android:name=".NoteListActivity"/>
+
+        <activity android:name=".CheckingActivity"/>
         <activity android:name=".DrawingActivity"/>
     </application>
 

@@ -1,9 +1,6 @@
-package com.example.admin.openglesnote.NoteListener;
+package com.example.admin.openglesnote.listeners;
 
-import android.app.Activity;
-import android.content.Context;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import com.example.admin.openglesnote.NoteActivity;
 
