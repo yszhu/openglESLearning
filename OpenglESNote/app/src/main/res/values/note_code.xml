@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="helloTriangleNote" >the basic way to load ran an openGL ES3.0 application</string>
+</resources>
