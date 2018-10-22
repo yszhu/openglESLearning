@@ -9,6 +9,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="hello triangle with loader"/>
+        android:text="hello triangle with loader,loader all be same,so it can be common part for all program "/>
 </LinearLayout>
 </android.support.constraint.ConstraintLayout>

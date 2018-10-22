@@ -158,8 +158,6 @@ public class VBORenderer implements GLSurfaceView.Renderer
         GLES30.glEnableVertexAttribArray ( VERTEX_POS_INDX );
         GLES30.glEnableVertexAttribArray ( VERTEX_COLOR_INDX );
 
-
-
         //there is little difference between this 2 way,the last param fo function
         //glVertexAttribPointer,use array it be the buffer of array,and use VBO , it's
         //offset of the first vertex data
@@ -184,7 +182,8 @@ public class VBORenderer implements GLSurfaceView.Renderer
         // mVertices.position ( VERTEX_POS_SIZE );
 
         //if use VBO ,the offset cab be set in the last param of function glVertexAttribPointer
-        //cause data have been transported into VBO ,so there is no need to tell the data source again
+        //cause data have been transported into VBO ,so there is no need to tell the data source
+        // again
         //note 3.2 by yszhu
 
         GLES30.glVertexAttribPointer ( VERTEX_POS_INDX, VERTEX_POS_SIZE,
