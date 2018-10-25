@@ -30,7 +30,7 @@
 	①glDrawArrays(mode,first,count),直接使用顶点数组
 	②glFrawElements(mode,count,type,indices),使用索引
 	③glDrawRangeElements(mode,start,end,count,type,indices)
-	2)以上所有count均指绘制的图元的数量，type(API ②，③)为indices中元素的类型，
+	2)count(①),指需要绘制的点的数量，count(②，③),指需要用到的索引的数量( 不是点的数量)，type(API ②，③)为indices中元素的类型，
 	start(API ③),end(API ③)要用到的indices的索引。
 
 	4)图元重启(3.0以上的版本)
