@@ -7,11 +7,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.admin.openglesnote.listeners.NoteListListener;
-import com.example.admin.openglesnote.notes.HelloTriangle;
-import com.example.admin.openglesnote.notes.MapBufferObject;
-import com.example.admin.openglesnote.notes.TriangleWithLoader;
-import com.example.admin.openglesnote.notes.VertexArrayObject;
-import com.example.admin.openglesnote.notes.VertexBufferObject;
+import com.example.admin.openglesnote.notes.vertex.HelloTriangle;
+import com.example.admin.openglesnote.notes.vertex.MapBufferObject;
+import com.example.admin.openglesnote.notes.vertex.TriangleWithLoader;
+import com.example.admin.openglesnote.notes.vertex.VertexArrayObject;
+import com.example.admin.openglesnote.notes.vertex.VertexBufferObject;
 
 
 public class NoteListActivity extends Activity {

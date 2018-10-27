@@ -14,7 +14,7 @@ import java.nio.ShortBuffer;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-public class HelloTriangleWithLoader implements GLSurfaceView.Renderer
+public class HelloTriangleWithLoader extends BasicRenderer
 {
 
     ///

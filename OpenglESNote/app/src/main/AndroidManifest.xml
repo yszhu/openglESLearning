@@ -16,16 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".notes.HelloTriangle"/>
-        <activity android:name=".notes.TriangleWithLoader"/>
-        <activity android:name=".notes.VertexBufferObject"/>
-        <activity android:name=".notes.VertexArrayObject"/>
-        <activity android:name=".notes.MapBufferObject"/>
+        <activity android:name=".notes.vertex.HelloTriangle"/>
+        <activity android:name=".notes.vertex.TriangleWithLoader"/>
+        <activity android:name=".notes.vertex.VertexBufferObject"/>
+        <activity android:name=".notes.vertex.VertexArrayObject"/>
+        <activity android:name=".notes.vertex.MapBufferObject"/>
 
         <activity android:name=".NoteListActivity"/>
 
         <activity android:name=".CheckingActivity"/>
         <activity android:name=".DrawingActivity"/>
+
+        <activity android:name=".notes.entity.EntityNoteActivity"/>
     </application>
 
 </manifest>

@@ -17,7 +17,7 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 
-public class MapBuffersRenderer implements GLSurfaceView.Renderer
+public class MapBuffersRenderer extends BasicRenderer
 {
     ///
     // Constructor

@@ -17,7 +17,7 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 
-public class VAORenderer implements GLSurfaceView.Renderer
+public class VAORenderer extends BasicRenderer
 {
 
     ///

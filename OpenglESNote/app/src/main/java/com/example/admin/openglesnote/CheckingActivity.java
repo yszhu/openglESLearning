@@ -17,7 +17,9 @@ public class CheckingActivity extends Activity {
             "Hello triangle with loader",
             "vertex buffer object",
             "vertex array object",
-            "map buffer object"
+            "map buffer object",
+            "drwa apis",
+            "simpleShader",
 
     };
     @Override

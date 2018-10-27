@@ -8,17 +8,20 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.admin.openglesnote.listeners.MainListener;
+import com.example.admin.openglesnote.notes.entity.EntityNoteActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     private ListView nameList;
     private Button checkDrawing;
     private String[] names={
-            "vertex attribute data transport"
+            "vertex attribute data transport",
+            "entity note"
     };
 
     private Class[] activities={
-            NoteListActivity.class
+            NoteListActivity.class,
+            EntityNoteActivity.class
     };
     private MainListener mainListener;
 

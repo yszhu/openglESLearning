@@ -7,25 +7,54 @@ import android.content.pm.ConfigurationInfo;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.admin.openglesnote.data.Renderers;
+import com.example.admin.openglesnote.renderers.BasicRenderer;
+import com.example.admin.openglesnote.renderers.EntityRenderer;
 import com.example.admin.openglesnote.renderers.HelloTriangleRenderer;
 
 public class DrawingActivity extends Activity {
     private final int CONTEXT_CLIENT_VERSION = 3;
 
+    private GLSurfaceView mGLSurfaceView;
+    private Button changeModeBtn;
+    private TextView apiText;
+
+    private BasicRenderer basicRenderer;
+
     @Override
     protected void onCreate ( Bundle savedInstanceState )
     {
         super.onCreate ( savedInstanceState );
-        mGLSurfaceView = new GLSurfaceView( this );
+
+        setContentView ( R.layout.activity_drawapi );
+
+        mGLSurfaceView = findViewById(R.id.surface_view);
+        changeModeBtn=findViewById(R.id.change_mode);
+        apiText=findViewById(R.id.function);
+        changeModeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                basicRenderer.setDrawAPI();
+                apiText.setText(basicRenderer.getDrawAPI());
+                Toast.makeText(DrawingActivity.this,basicRenderer.getDrawAPI(),Toast.LENGTH_SHORT).show();
+            }
+        });
 
         if ( detectOpenGLES30() )
         {
             // Tell the surface view we want to create an OpenGL ES 3.0-compatible
             // context, and set an OpenGL ES 3.0-compatible renderer.
             mGLSurfaceView.setEGLContextClientVersion ( CONTEXT_CLIENT_VERSION );
-            mGLSurfaceView.setRenderer ( Renderers.getCurrentRenderer(this) );
+            basicRenderer= (BasicRenderer) Renderers.getCurrentRenderer(this);
+            mGLSurfaceView.setRenderer (basicRenderer);
+            if(basicRenderer.getDrawAPI()!=null){
+                apiText.setText(basicRenderer.getDrawAPI());
+            }
         }
         else
         {
@@ -34,7 +63,7 @@ public class DrawingActivity extends Activity {
 
         }
 
-        setContentView ( mGLSurfaceView );
+
     }
 
     //check the status of device support version of opengl es,here check the version 3
@@ -65,5 +94,5 @@ public class DrawingActivity extends Activity {
         mGLSurfaceView.onPause();
     }
 
-    private GLSurfaceView mGLSurfaceView;
+
 }
