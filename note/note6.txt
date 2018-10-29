@@ -1,0 +1,3 @@
+note 6 created after summary
+vertex shader will be read again after finished other chapters,cause It's hard to unstand ,the other 
+book about WebGL is more suitable 
