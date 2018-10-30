@@ -20,6 +20,10 @@ public class CheckingActivity extends Activity {
             "map buffer object",
             "drwa apis",
             "simpleShader",
+            "simpleTexture",
+            "mipmap texture",
+            "wrap map",
+            "cube map"
 
     };
     @Override

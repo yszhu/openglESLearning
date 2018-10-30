@@ -55,6 +55,10 @@ public class DrawingActivity extends Activity {
             if(basicRenderer.getDrawAPI()!=null){
                 apiText.setText(basicRenderer.getDrawAPI());
             }
+            else {
+                changeModeBtn.setVisibility(View.GONE);
+            }
+
         }
         else
         {
