@@ -9,6 +9,7 @@ import com.example.admin.openglesnote.renderers.HelloTriangleRenderer;
 import com.example.admin.openglesnote.renderers.HelloTriangleWithLoader;
 import com.example.admin.openglesnote.renderers.MapBuffersRenderer;
 import com.example.admin.openglesnote.renderers.MipMap2DRenderer;
+import com.example.admin.openglesnote.renderers.MultiTextureRenderer;
 import com.example.admin.openglesnote.renderers.SimpleTexture2DRenderer;
 import com.example.admin.openglesnote.renderers.SimpleTextureCubemapRenderer;
 import com.example.admin.openglesnote.renderers.SimpleVertexShaderRenderer;
@@ -29,6 +30,7 @@ public class Renderers {
     public static final String RENDERER_MIPMAP="mipmap";
     public static final String RENDERER_WRAP="wrap map";
     public static final String RENDERER_CUBE_MAP="cube map";
+    public static final String RENDERER_MULTI_TEXTURE="multiTexture";
 
     private static String[] renderers={
             RENDERER_HELLO_TRIANGLE,
@@ -41,7 +43,8 @@ public class Renderers {
             RENDERER_SIMPLE_TEXTURE,
             RENDERER_MIPMAP,
             RENDERER_WRAP,
-            RENDERER_CUBE_MAP
+            RENDERER_CUBE_MAP,
+            RENDERER_MULTI_TEXTURE
     };
     public static String currentRenderer=renderers[0];
 //    public static Renderers getInstance(){
@@ -89,6 +92,9 @@ public class Renderers {
                 break;
             case RENDERER_CUBE_MAP:
                 renderer=new SimpleTextureCubemapRenderer(context);
+                break;
+            case RENDERER_MULTI_TEXTURE:
+                renderer=new MultiTextureRenderer(context);
                 break;
         }
 

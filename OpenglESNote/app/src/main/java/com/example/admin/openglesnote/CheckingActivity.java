@@ -18,12 +18,13 @@ public class CheckingActivity extends Activity {
             "vertex buffer object",
             "vertex array object",
             "map buffer object",
-            "drwa apis",
+            "draw apis",
             "simpleShader",
             "simpleTexture",
             "mipmap texture",
             "wrap map",
-            "cube map"
+            "cube map",
+            "multi texture"
 
     };
     @Override
